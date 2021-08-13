@@ -117,7 +117,7 @@
                 </div>
                 <div>
                   <h3 class="card-title mb-3">
-                    CSSsssssssss
+                    CSS
                   </h3>
                   <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat voluptatem modi quam similique eveniet harum corporis nulla nihil ex voluptatum laborum nostrum accusantium, dolores asperiores. Omnis nemo a veritatis ad?</p>
                   <a href="#" class="btn btn-dark">Više</a>
