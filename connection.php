@@ -1,12 +1,9 @@
-<? php
+<?php
 
-/* db connection settings */
-//$dbhost="localhost";
+$dbhost="localhost";
 $dbuser="root";
 $dbpass="";
-$dbname="users";
-
+$dbname="korisnici";
 if(!$con=mysqli_connect($dbhost,$dbuser,$dbpass,$dbname)){
-    die("faild to connect!");
+  die("failed to connect");
 }
-?>

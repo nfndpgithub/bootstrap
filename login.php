@@ -1,8 +1,39 @@
 <?php
   session_start();
-  include("connection.php");
-  include("functions.php");
-  $user_data=check_login($con);
+  
+  include ("connection.php");
+  require 'functions.php';
+  $object1=new functions();
+  
+  $user_data=$object1->check_login($con);
+
+  if($_SERVER['REQUEST_METHOD']=="POST"){
+    //nesto je postavljeno
+    $firstName=$_POST['firstName'];
+    $lastName=$_POST['lastName'];
+    $email=$_POST['email'];
+    $phone=$_POST['phone'];
+    $ulica=$_POST['ulica'];
+    $grad=$_POST['grad'];
+    $drazva=$_POST['drazava'];
+
+
+
+    if(!empty($firstName)&& !empty($lastName)&& !is_numeric($firstName)&& !is_numeric($lastName))
+  {
+    //sacuvaj u bazi
+    $user_id= $object1->random_num(20);
+    $query="insert into users (user_id,ime,prezime,tel,email,ulica,grad,drzava) values ('$user_id','$firstNamename','$lastName','$phone','$email','$ulica','$grad','$drzava')";
+    mysqli_query($con, $query);
+    echo "dfadfdsa";
+    //header("Location: login.php"); posalje na uspesan login!!!
+    //die;
+  }else{
+    echo "Molim Vas unesite tacne informacije!";
+  }
+
+  }
+  
   
 
 ?>
@@ -17,6 +48,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Prijava</title>
 </head>
+<?php 
+  
+
+
+
+?>
 <body>
     <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark  py-3 fixed-top ">
@@ -42,33 +79,33 @@
         <h1 class="text-center mb-5">Prijava</h1>
     <form class="row g-3">
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label" placeholder="Unesi ime">Ime</label>
-    <input type="email" class="form-control" id="inputIme">
+    <label for="inputName" class="form-label" placeholder="Unesi ime">Ime</label>
+    <input type="text" class="form-control" name="firstName">
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Prezime</label>
-    <input type="password" class="form-control" id="inputPrezime">
+    <input type="text" class="form-control" name="lastName">
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Broj telefona</label>
-    <input type="text" class="form-control" id="inputBroj" placeholder="011/347-569">
+    <input type="text" class="form-control" name="phone" placeholder="011/347-569">
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">Email</label>
-    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+    <input type="text" class="form-control" name="email" placeholder="Email">
   </div>
   <div class="col-md-4">
     <label for="inputCity" class="form-label">Ulica</label>
-    <input type="text" class="form-control" id="inputUlica">
+    <input type="text" class="form-control" name="ulica">
   </div>
   <div class="col-md-4">
     <label for="inputState" class="form-label">Grad</label>
-    <input id="text" class="form-control" id="inputGrad">
+    <input id="text" class="form-control" name="grad">
     </input>
   </div>
   <div class="col-md-4">
     <label for="inputZip" class="form-label">Drzava</label>
-    <input type="text" class="form-control" id="inputDrzava">
+    <input type="text" class="form-control" name="drzava">
   </div>
   
   <div class="col-12">
