@@ -1,28 +1,23 @@
 <?php
   session_start();
   
-  include ("connection.php");
-  require 'functions.php';
-  $object1=new functions();
+  include "database.php";
   
-  $user_data=$object1->check_login($con);
+  $mydb=new Database('korisnici');
+  
+ // $user_data=$mydb->check_login($con);
 
-  if($_SERVER['REQUEST_METHOD']=="POST"){
+  if($_SERVER['REQUEST_METHOD']=='POST'){
     //nesto je postavljeno
-    $firstName=$_POST['firstName'];
-    $lastName=$_POST['lastName'];
-    $email=$_POST['email'];
-    $phone=$_POST['phone'];
-    $ulica=$_POST['ulica'];
-    $grad=$_POST['grad'];
-    $drazva=$_POST['drazava'];
+    $mydb->register();
+   
 
 
 
-    if(!empty($firstName)&& !empty($lastName)&& !is_numeric($firstName)&& !is_numeric($lastName))
+    /* if(!empty($firstName)&& !empty($lastName)&& !is_numeric($firstName)&& !is_numeric($lastName))
   {
     //sacuvaj u bazi
-    $user_id= $object1->random_num(20);
+    $user_id= $mydb->random_num(20);
     $query="insert into users (user_id,ime,prezime,tel,email,ulica,grad,drzava) values ('$user_id','$firstNamename','$lastName','$phone','$email','$ulica','$grad','$drzava')";
     mysqli_query($con, $query);
     echo "dfadfdsa";
@@ -30,7 +25,7 @@
     //die;
   }else{
     echo "Molim Vas unesite tacne informacije!";
-  }
+  } */
 
   }
   
@@ -109,7 +104,7 @@
   </div>
   
   <div class="col-12">
-    <button type="submit" class="btn btn-primary  mt-2 mb-5">Prijavi se</button>
+    <button type="submit" formmethod="post" class="btn btn-primary  mt-2 mb-5">Prijavi se</button>
   </div>
 </form>
     </div>
