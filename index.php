@@ -195,7 +195,7 @@
     <!-- question accordion -->
     <section id="questions" class="p-5">
       <div class="container">
-        <h2 class="text-center mb-4">Najcesca Pitanja</h2>
+        <h2 class="text-center mb-4 ">Najcesca Pitanja</h2>
         <div class="accordion accordion-flush" id="questions">
           <!-- item 1 -->
           <div class="accordion-item">
@@ -227,7 +227,7 @@
                 Da li mi treba predznadnje?
               </button>
             </h2>
-            <div id="question-two" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div id="question-three" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quo nobis excepturi, illo facilis ratione, dolore culpa non quas obcaecati dolorem accusamus debitis dicta quisquam odit id. Eius commodi eligendi, enim soluta iste impedit ut amet aperiam laudantium maiores dolor sapiente ad dolorum, inventore nobis ea ex assumenda est aut dignissimos modi nesciunt ipsum perspiciatis! Atque tempora ipsum iure pariatur unde beatae qui, dolorem architecto ab iusto quod harum, corporis consequatur dicta mollitia, voluptatem odit optio? Natus perferendis aperiam dolores. Veniam inventore sed exercitationem non autem doloremque pariatur odit, nobis est, illo voluptatibus vitae similique at rerum, unde cum ratione.<code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
             </div>
           </div>
