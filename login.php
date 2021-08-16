@@ -5,7 +5,7 @@
   
   $mydb=new Database('korisnici');
   
- // $user_data=$mydb->check_login($con);
+ 
 
   if($_SERVER['REQUEST_METHOD']=='POST'){
     //nesto je postavljeno
@@ -14,18 +14,7 @@
 
 
 
-    /* if(!empty($firstName)&& !empty($lastName)&& !is_numeric($firstName)&& !is_numeric($lastName))
-  {
-    //sacuvaj u bazi
-    $user_id= $mydb->random_num(20);
-    $query="insert into users (user_id,ime,prezime,tel,email,ulica,grad,drzava) values ('$user_id','$firstNamename','$lastName','$phone','$email','$ulica','$grad','$drzava')";
-    mysqli_query($con, $query);
-    echo "dfadfdsa";
-    //header("Location: login.php"); posalje na uspesan login!!!
-    //die;
-  }else{
-    echo "Molim Vas unesite tacne informacije!";
-  } */
+   
 
   }
   
@@ -43,12 +32,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Prijava</title>
 </head>
-<?php 
-  
 
-
-
-?>
 <body>
     <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark  py-3 fixed-top ">
@@ -60,7 +44,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto d-lg-flex px-10">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Nazad</a>
+          <a class="nav-link active lead" aria-current="page" href="index.php">Nazad</a>
         </li>
         
         
@@ -105,6 +89,7 @@
   
   <div class="col-12">
     <button type="submit" formmethod="post" class="btn btn-primary  mt-2 mb-5">Prijavi se</button>
+   
   </div>
 </form>
     </div>

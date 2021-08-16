@@ -1,7 +1,19 @@
 <?php
   session_start();
-
+  include "database.php";
   $_SESSION;
+  $mydb2=new Database('korisnici');
+
+  if($_SERVER['REQUEST_METHOD']=='POST'){
+    //nesto je postavljeno
+    $mydb2->sacuvaj();
+   
+
+
+
+   
+
+  }
 
 ?>
 
@@ -42,7 +54,7 @@
         </div>
       </div>
     </nav> -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark  py-3 fixed-top ">
+    <nav  class="navbar navbar-expand-lg navbar-dark bg-dark  py-3 fixed-top ">
   <div class="container-fluid">
   <a href="#" class="navbar-brand">Frontend bootcamp</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,18 +66,22 @@
           <a class="nav-link active" aria-current="page" href="#oNama">O nama</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#pitanja">Pitanja</a>
+          <a class="nav-link" href="#questions">Pitanja</a>
         </li>
+        <li class="nav-item">
+              <a href="#instructors" class="nav-link ">Nastavnici</a>
+            </li>
         <li class="nav-item">
           <a class="nav-link" href="login.php">Prijavi se za kurs</a>
         </li>
+        
         
       </ul>
     </div>
   </div>
 </nav>
     <!-- showcase -->
-    <section class="bg-dark text-light p-5  p-lg-0 pt-lg-5 text-center text-sm-start">
+    <section id="oNama" class="bg-dark text-light p-5  p-lg-0 pt-lg-5 text-center text-sm-start">
       <div class="container">
         <div class="d-sm-flex align-item-center justify-content-between">
           <div> 
@@ -81,19 +97,21 @@
       </div>
     </section>
     <!-- newsletter area -->
+    <form action="" method="post">
     <section class="bg-primary text-light p-5">
       <div class="container">
       <div class="d-md-flex justify-content-between align-item-center">
         <h3 class="mb-3 mb-md-0">Prteplatite se za novosti</h3>
-
+        
         <div class="input-group news-input">
-          <input type="text" class="form-control" placeholder="Unesi email" >
-          <button class="btn btn-dark btn-lg" type="button" >Pretplati se</button>
+          <input type="text" class="form-control" name=email placeholder="Unesi email" >
+          <button class="btn btn-dark btn-lg" type="submit"  >Pretplati se</button>
         </div>
 
       </div>
     </div>
     </section>
+    </form>
     <!-- boxes  -->
     <section class="p-5">
       <div class="container">
