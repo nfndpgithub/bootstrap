@@ -70,7 +70,10 @@
         </li>
         <li class="nav-item">
               <a href="#instructors" class="nav-link ">Nastavnici</a>
-            </li>
+        </li>
+        <li class="nav-item">
+              <a href="sort.php" class="nav-link ">Prijavljeni</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="login.php">Prijavi se za kurs</a>
         </li>

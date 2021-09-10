@@ -8,7 +8,7 @@ if($order=='decs'){
 }else{
     $order='desc';
 }
-$query="select id ime,prezime, email from users order by ".$_POST["column_name"]." ".$_POST["order"]."";
+$query="select id, ime, prezime, email from users order by ".$_POST["column_name"]." ".$_POST["order"]."";
 $result=mysqli_query($connect,$query);
 $output.='
 
