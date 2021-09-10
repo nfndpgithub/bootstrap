@@ -28,32 +28,7 @@
     <title>Frontend bootcamp</title>
   </head>
   <body>
-    <!-- navbar -->
-
-   <!--  <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 fixed-top ">
-      <div class="container">
-        <a href="#" class="navbar-brand">Frontend bootcamp</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse " id="navmenu">
-          <ul class="nabar-nav ms-auto d-lg-flex px-10 ">
-            <li class="nav-item ">
-              <a href="#learn" class="nav-link text-white">O nama</a>
-            </li>
-            <li class="nav-item">
-              <a href="#questions" class="nav-link text-white">Pitanja</a>
-            </li>
-            <li class="nav-item">
-              <a href="#instructors" class="nav-link text-white">Prijavi se za kurs</a>
-            </li>
-          </ul>
-
-
-
-        </div>
-      </div>
-    </nav> -->
+    
     <nav  class="navbar navbar-expand-lg navbar-dark bg-dark  py-3 fixed-top ">
   <div class="container-fluid">
   <a href="#" class="navbar-brand">Frontend bootcamp</a>
