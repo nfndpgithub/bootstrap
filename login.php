@@ -1,3 +1,26 @@
+<?php
+  session_start();
+  
+  include "database.php";
+  
+  $mydb=new Database('korisnici');
+  
+ 
+
+  if($_SERVER['REQUEST_METHOD']=='POST'){
+    //nesto je postavljeno
+    $mydb->register();
+   
+
+
+
+   
+
+  }
+  
+  
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +32,7 @@
     <link rel="stylesheet" href="style.css">
     <title>Prijava</title>
 </head>
+
 <body>
     <!-- navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark  py-3 fixed-top ">
@@ -20,7 +44,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ms-auto d-lg-flex px-10">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Nazad</a>
+          <a class="nav-link active lead" aria-current="page" href="index.php">Nazad</a>
         </li>
         
         
@@ -34,37 +58,38 @@
         <h1 class="text-center mb-5">Prijava</h1>
     <form class="row g-3">
   <div class="col-md-6">
-    <label for="inputEmail4" class="form-label" placeholder="Unesi ime">Ime</label>
-    <input type="email" class="form-control" id="inputIme">
+    <label for="inputName" class="form-label" placeholder="Unesi ime">Ime</label>
+    <input type="text" class="form-control" name="firstName">
   </div>
   <div class="col-md-6">
     <label for="inputPassword4" class="form-label">Prezime</label>
-    <input type="password" class="form-control" id="inputPrezime">
+    <input type="text" class="form-control" name="lastName">
   </div>
   <div class="col-12">
     <label for="inputAddress" class="form-label">Broj telefona</label>
-    <input type="text" class="form-control" id="inputBroj" placeholder="011/347-569">
+    <input type="text" class="form-control" name="phone" placeholder="011/347-569">
   </div>
   <div class="col-12">
     <label for="inputAddress2" class="form-label">Email</label>
-    <input type="text" class="form-control" id="inputEmail" placeholder="Email">
+    <input type="text" class="form-control" name="email" placeholder="Email">
   </div>
   <div class="col-md-4">
     <label for="inputCity" class="form-label">Ulica</label>
-    <input type="text" class="form-control" id="inputUlica">
+    <input type="text" class="form-control" name="ulica">
   </div>
   <div class="col-md-4">
     <label for="inputState" class="form-label">Grad</label>
-    <input id="text" class="form-control" id="inputGrad">
+    <input id="text" class="form-control" name="grad">
     </input>
   </div>
   <div class="col-md-4">
     <label for="inputZip" class="form-label">Drzava</label>
-    <input type="text" class="form-control" id="inputDrzava">
+    <input type="text" class="form-control" name="drzava">
   </div>
   
   <div class="col-12">
-    <button type="submit" class="btn btn-primary  mt-2 mb-5">Prijavi se</button>
+    <button type="submit" formmethod="post" class="btn btn-primary  mt-2 mb-5">Prijavi se</button>
+   
   </div>
 </form>
     </div>
